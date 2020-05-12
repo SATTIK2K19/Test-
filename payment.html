@@ -1,0 +1,100 @@
+  <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+
+      <title>SI/CI CALCULATION</title>
+      <link rel="stylesheet" href="CSS/payment.css">
+    </head>
+    <body>
+      <div class="jumbotron">
+        <!--starts div from here, main div part for all si & ci caoding -->
+        <strong><h1 class="text-center display-4" align="center"><u>INTEREST CALCULATOR</u></h1></strong>
+        <hr size="3" noshade color=#d1650d>
+        <div class="container" id="simple-interest">
+      <!--1ST CONTAINER DIV-->
+      <h3 align="center"><u>Simple Interest</u></h3>
+      <p class="lead" align="center"><strong>
+          <caption><u>A=i+(prt)</u></caption>
+        </strong></p>
+            <div class="form-group">
+              <label for="principalSimple">Principal</label> 
+                <br>
+
+              <input type="text" class="form-control" id="principalSimple" placeholder="Enter amount without ₹ sign">
+            </div>
+        <!--div p-->
+
+            <div class="form-group">
+              <label for="interestSimple">Interest Rate</label>
+              <br>
+              <input type="text" class="form-control" id="interestSimple" placeholder="Example: 12%">
+            </div>
+            <!--div r-->
+            <div class="form-group">
+              <label for="termSimple">Term of Loan</label>
+              <br>
+              <input type="text" class="form-control" id="termSimple" placeholder="Example: 2 (must be in terms of years)">
+            </div>
+            <!--div t-->
+            <button type="submit" class="btn btn-primary" id="btnSimple" onclick="simpleInterest()">SUBMIT</button>
+          </form>
+          <div>
+            <p class="lead mt-3" id="siOutput-01"></p>
+            <p class="lead mb-3" id="siOutput-02"></p>
+          </div>
+          <div class="text-center">
+          <input class="btn btn-secondary btn-lg" type="button" value="Reset" onclick="document.getElementById('siForm').reset()">
+          </div>
+        </div>
+        <br>
+        <hr size="3" noshade color=#d1650d>
+        <br>
+        <div class="container" div="compound-interest ">
+          <!--2nd CONTAINER DIV-->
+          <h3 align="center"><u>Compound Interest</u></h3>
+          <p class="lead" align="center"><strong>
+              <caption><u>A=p(1+(r/n))^(nt)</u></caption>
+            </strong></p>
+          <form id="ciForm">
+            <div class="form-group">
+              <label for="principalCompound">Principal</label>
+              <br>
+              <input type="text" class="form-control" id="principalCompound" placeholder="Enter amount without ₹ sign">
+            </div>
+            <!--div p-->
+            <div class="form-group">
+              <label for="interestCompound">Interest Rate</label>
+              <br>
+              <input type="text" class="form-control" id="interestCompound" placeholder="Example: 12%">
+            </div>
+            <!--div r-->
+
+            <div class="form-group">
+              <label for="timesCompounded">Times Compounded per Year</label>
+              <br>
+              <input type="text" class="form-control" id="timesCompounded" placeholder="Example: 4 (means compounded quarterly)">
+            </div>
+            <!--div n-->
+
+            <div class="form-group">
+              <label for="termCompound">Term of Loan</label>
+              <br>
+              <input type="text" class="form-control" id="termCompound" placeholder="Example: 2 (must be in terms of years)">
+            </div>
+              <!--div t-->
+            <button type="submit" class="btn btn-primary" id="btnCompound" onclick="compoundInterest()">Submit</button>
+          </form>
+          <div>
+            <p class="lead mt-3" id="ciOutput-01"></p>
+            <p class="lead mb-3" id="ciOutput-02"></p>
+          </div>
+          <div class="text-center">
+            <input class="btn btn-secondary btn-lg" type="button" value="Reset" onclick="document.getElementById('ciForm').reset()">
+          </div>
+        </div>
+      </div>
+    </body>
+  <script src="JS/payment.js" charset="utf-8"></script>
+
+  </html>
